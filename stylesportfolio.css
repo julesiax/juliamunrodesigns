@@ -1,0 +1,611 @@
+/* PERSONAL HOMEPAGE */
+
+
+
+/* COLOR VARIABLES
+----------------------------------------------- */
+:root {
+  --dark: #000000;
+  --light: #FFFFFF;
+  --mid: #CCCCCC;
+}
+
+
+/* BASE STYLES
+----------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0; 
+  line-height: 1.3;
+  color: #EBEDD5;
+  font-size: 12px;
+  font-family: 'Bitter', serif;
+}
+
+img {
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: repeat-y;
+  max-height: 100%;
+}
+
+
+/* TYPOGRAPHY
+----------------------------------------------- */
+
+
+
+/* HEADER
+----------------------------------------------- */
+header {
+
+}
+
+
+/* MAIN
+----------------------------------------------- */
+main {
+  padding: 80px 0 0px 0;
+  background-image: url("images/starsbg.gif");
+  border: 1px solid red; 
+  height: 100%;
+}
+
+h2 {
+  margin-left: 80px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
+h1 {
+  grid-area: 1 / 1 / span 1 / span 2;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  margin-left: 80px;
+  margin-right: 25%;
+}
+
+p {
+  color: #EBEDD5;
+  size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  max-height: 1fr;
+
+}
+
+.moon {
+  grid-area: 1 / 5 / span 1 / span 1;
+  width: 60%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.overlaymoon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.moon:hover .overlaymoon {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+.house { 
+  grid-area: 5 / 1 / span 2 / span 2;
+  width: 70%;
+  position: relative;
+  margin-left: 50px;
+  transform: translateY(60px);
+}
+
+.overlayhouse {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.house:hover .overlayhouse {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+.girl {
+  grid-area: 7 / 3 / span 1 / span 1;
+  width: 80%;
+  position: relative;
+}
+
+.overlaygirl {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.girl:hover .overlaygirl {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+.girl:hover .girlneutral {
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.grass {
+  grid-area: 7 / 1 / span 1 / span 5;
+  height: 400px;
+  background-color: #113427;
+  background-image: url("images/grass.png");
+  background-size: 200px;
+
+}
+
+/*Illustration*/
+
+.illustration {
+  grid-area: 1 / 3 / span 1 / span 1;
+  position: relative;
+}
+
+.ioverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.illustration:hover .ioverlay {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+/*Brand Identity*/
+
+.brandidentity {
+  grid-area: 2 / 1 / span 1 / span 1;
+  position: relative;
+  width: 80%;
+  margin-left: 100px;
+}
+
+.bioverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.brandidentity:hover .bioverlay {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+/*Package Design*/
+
+.packagedesign {
+  grid-area: 2 / 4 / span 1 / span 1;
+  position: relative;
+  width: 80%;
+  margin-left: 30px;
+}
+
+.pdoverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.packagedesign:hover .pdoverlay {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+/*Book Design*/
+
+.bookdesign {
+  grid-area: 3 / 3 / span 1 / span 1;
+  position: relative;
+  width: 80%;
+  margin-left: 30px;
+}
+
+.bdoverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.bookdesign:hover .bdoverlay {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+/*Photography*/
+
+.photography {
+  grid-area: 4 / 2 / span 1 / span 1;
+  position: relative;
+}
+
+.poverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.photography:hover .poverlay {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+/*Advertising*/
+
+.advertising {
+  grid-area: 5 / 4 / span 1 / span 2;
+  position: relative;
+  margin-right: 100px;
+  margin-left: 100px;
+  width: 50%;
+}
+
+.aoverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.advertising:hover .aoverlay {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+/* FOOTER
+----------------------------------------------- */
+footer {
+
+}
+
+hr {
+  height: 500px;
+}
+
+/* GALLERY 
+----------------------------------------------- */
+
+p {
+  padding-bottom: 20px;
+  padding-left: 20%;
+  max-width: 80%;
+  font-style: italic;
+}
+
+/* The Modal (background) */
+.modal {
+  padding-top: 50px;
+  grid-area: 1 / 1 / span 7 / span 5;
+  display: none;
+  z-index: 2;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  max-width: 900px;
+  height: auto;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #1A1A1A;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* The Close Button */
+.close {
+  z-index: 2;
+  top: 6px;
+  right: 15px;
+  color: #EBEDD5;
+  position: absolute;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #FDDF99;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 150px;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #FDDF99;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #EBEDD5;
+  font-size: 12px;
+  padding: 12px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.imagesize {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 100%;
+}
+
+/* MEDIA QUERIES
+----------------------------------------------- */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  h2 {
+    font-size: 35px;
+  }
+
+  h1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+    font-size: 16px;
+    margin-right: -100px;
+  }
+
+  p {
+    font-size: 10pt;
+  }
+
+    .modal {
+width: 80vw;
+}
+
+  .grid {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: auto;
+  }
+
+  .moon {
+    grid-area: 1 / 3 / span 1 / span 1;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    position: relative;
+    margin-right: 80px;
+  }
+
+
+  .house { 
+    grid-area: 5 / 1 / span 1 / span 1;
+    width: 80%;
+    display: block;
+  }
+
+  .girl {
+    grid-area: 6 / 2 / span 1 / span 2;
+    width: 23%;
+    position: relative;
+    display: block;
+    margin-left: 100px;
+  }
+
+  .grass {
+    grid-area: 6 / 1 / span 1 / span 3;
+  }
+
+  .illustration {
+    grid-area: 1 / 2 / span 1 / span 1;
+    position: relative;  
+  }
+
+  .brandidentity {
+    grid-area: 2 / 1 / span 1 / span 1;
+    position: relative;
+    width: 60%;
+    margin-left: 80px;
+  }
+
+  .packagedesign {
+    grid-area: 2 / 3 / span 1 / span 1;
+    position: relative;
+    width: 60%;
+    margin-left: 30px;
+  }
+
+  .bookdesign {
+    grid-area: 3 / 2 / span 1 / span 1;
+    position: relative;
+    width: 60%;
+    margin-left: 40px;
+  }
+
+  .photography {
+    grid-area: 4 / 1 / span 1 / span 1;
+    position: relative;
+    width: 80%;
+    margin-left: 40px;
+  }
+
+  .advertising {
+    grid-area: 4 / 2 / span 1 / span 2;
+    position: relative;
+    width: 40%;
+    margin-left: 250px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+    font-size: 14px;
+    margin-right: 250px;
+  }
+
+  p {
+    font-size: 9pt;
+  }
+
+  .modal {
+width: 90vw;
+}
+
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    max-height: 1fr;
+  }
+
+  .moon {
+    grid-area: 1 / 2 / span 2 / span 1;
+    width: 25%;
+    display: block;
+    position: relative;
+    margin-left: 50%;
+  }
+
+  .house { 
+    grid-area: 8 / 1 / span 1 / span 1;
+    width: 80%;
+    margin-left: 40px;
+    position: relative;
+  }
+
+  .girl {
+    grid-area: 9 / 1 / span 1 / span 2;
+    width: 30%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grass {
+    grid-area: 9 / 1 / span 1 / span 2;
+  }
+
+  .illustration {
+    grid-area: 2 / 1 / span 1 / span 1;
+    position: relative;
+    width: 80%;
+    margin-left: 30px;
+  }
+
+  .brandidentity {
+    grid-area: 3 / 2 / span 1 / span 1;
+    position: relative;
+    width: 60%;
+    margin-left: 80px;
+  }
+
+  .photography {
+    grid-area: 4 / 1 / span 1 / span 2;
+    position: relative;
+    width: 40%;
+    margin-left: 30%;
+  }
+
+  .bookdesign {
+    grid-area: 5 / 1 / span 1 / span 1;
+    position: relative;
+    width: 60%;
+    margin-left: 40px;
+  }
+
+  .packagedesign {
+    grid-area: 6 / 2 / span 1 / span 1;
+    position: relative;
+    width: 60%;
+    margin-left: 40px;
+  }
+
+  .advertising {
+    grid-area: 7 / 1 / span 1 / span 2;
+    position: relative;
+    width: 40%;
+    margin-left: 25%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
